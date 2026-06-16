@@ -1,11 +1,11 @@
 import React from "react";
-import PersonalStep from "./steps/PersonalStep";
-import EmailStep from "./steps/EmailStep";
-import AddressStep from "./steps/AddressStep";
-import ReviewStep from "./steps/ReviewStep";
+import PersonalStep from "../Components/Registration/steps/PersonalStep";
+import EmailStep from "../Components/Registration/steps/EmailStep";
+import AddressStep from "../Components/Registration/steps/AddressStep";
+import ReviewStep from "../Components/Registration/steps/ReviewStep";
 import { useState } from "react";
 import { Form, Formik } from "formik";
-import { validationSchema } from "./registrationValidation";
+import { validationSchema } from "../Components/Registration/registrationValidation";
 
 const steps = [PersonalStep, EmailStep, AddressStep, ReviewStep];
 
