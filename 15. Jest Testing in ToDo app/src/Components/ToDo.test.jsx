@@ -55,3 +55,13 @@ test("does not add empty task", async () => {
 
   expect(screen.queryByRole("listitem")).not.toBeInTheDocument();
 });
+
+test("matches snapshot", () => {
+  const { container } = render(
+    <Provider store={store}>
+      <ToDo />
+    </Provider>,
+  );
+
+  expect(container).toMatchSnapshot();
+});
