@@ -4,13 +4,19 @@ export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async (_, thunk) => {
     try {
-      const res = await fetch("https://fakestoreapi.com/products");
+      const res = await fetch("https://fakestoreapi.com/products", {
+        signal: thunk.signal,
+      });
       if (!res.ok) {
         throw new Error("Error in fetching the API");
       }
 
       return await res.json();
     } catch (error) {
+      if (error.name === "AbortError") {
+        return;
+      }
+
       return thunk.rejectWithValue(error.message);
     }
   },

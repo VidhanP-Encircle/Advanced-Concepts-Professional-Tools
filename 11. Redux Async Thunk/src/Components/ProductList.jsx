@@ -7,7 +7,11 @@ const ProductList = () => {
   const { products, loading, error } = useSelector((state) => state.products);
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    const promise = dispatch(fetchProducts());
+
+    return () => {
+      promise.abort();
+    };
   }, []);
 
   if (loading) {
