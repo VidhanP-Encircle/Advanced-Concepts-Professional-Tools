@@ -8,7 +8,9 @@ export const validationSchema = [
       .min(1, "Selecet minimum one skill")
       .required("Skills are required"),
     gender: Yup.string().required("Gender is required"),
-    dob: Yup.string().required("Date of Birth is required"),
+    dob: Yup.date()
+      .max(new Date(), "Date of Birth cannot be in the future")
+      .required("Date of Birth is required"),
     experience: Yup.string().required("Experience is required"),
   }),
 

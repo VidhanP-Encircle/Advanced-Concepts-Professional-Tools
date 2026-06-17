@@ -84,6 +84,11 @@ const PersonalStep = () => {
       <div>
         <label className="block font-medium mb-2">Date Of Birth</label>
         <Field type="date" name="dob" className="w-full border p-2 rounded" />
+        <ErrorMessage
+          name="dob"
+          component="div"
+          className="text-red-500 text-sm mt-1"
+        />
       </div>
 
       <div>
