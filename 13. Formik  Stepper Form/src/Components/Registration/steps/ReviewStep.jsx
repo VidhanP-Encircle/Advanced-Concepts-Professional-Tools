@@ -16,6 +16,22 @@ const ReviewStep = () => {
       </div>
 
       <div>
+        <span className="font-medium">Skills:</span> {values.skills?.join(", ")}
+      </div>
+
+      <div>
+        <span className="font-medium">Gender:</span> {values.gender}
+      </div>
+
+      <div>
+        <span className="font-medium">DOB:</span> {values.dob}
+      </div>
+
+      <div>
+        <span className="font-medium">Experience:</span> {values.experience}
+      </div>
+
+      <div>
         <span className="font-medium">Email:</span> {values.email}
       </div>
 

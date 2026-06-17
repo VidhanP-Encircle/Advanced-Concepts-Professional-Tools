@@ -15,6 +15,10 @@ const RegistrationForm = () => {
   const initialValue = {
     firstName: "",
     lastName: "",
+    skills: [],
+    gender: "",
+    experience: "",
+    dob: "",
     email: "",
     password: "",
     address: "",

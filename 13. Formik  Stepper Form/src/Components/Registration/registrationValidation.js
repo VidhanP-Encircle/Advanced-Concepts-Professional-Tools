@@ -4,6 +4,12 @@ export const validationSchema = [
   Yup.object({
     firstName: Yup.string().required("Firstname is required"),
     lastName: Yup.string().required("Last name is required"),
+    skills: Yup.array()
+      .min(1, "Selecet minimum one skill")
+      .required("Skills are required"),
+    gender: Yup.string().required("Gender is required"),
+    dob: Yup.string().required("Date of Birth is required"),
+    experience: Yup.string().required("Experience is required"),
   }),
 
   Yup.object({
