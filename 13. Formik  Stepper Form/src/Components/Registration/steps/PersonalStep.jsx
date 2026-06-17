@@ -35,22 +35,20 @@ const PersonalStep = () => {
       <div>
         <label className="block font-medium mb-1">Skills</label>
         <FieldArray name="skills">
-          {({ push, remove, form }) => (
-            <div className="space-y-2">
-              {skillsSet.map((skill) => (
-                <label key={skill} className="flex items-center gap-2">
-                  <Field type="checkbox" name="skills" value={skill} />
-                  {skill}
-                </label>
-              ))}
+          <div className="space-y-2">
+            {skillsSet.map((skill) => (
+              <label key={skill} className="flex items-center gap-2">
+                <Field type="checkbox" name="skills" value={skill} />
+                {skill}
+              </label>
+            ))}
 
-              <ErrorMessage
-                name="skills"
-                component="div"
-                className="text-red-500 text-sm mt-1"
-              />
-            </div>
-          )}
+            <ErrorMessage
+              name="skills"
+              component="div"
+              className="text-red-500 text-sm mt-1"
+            />
+          </div>
         </FieldArray>
       </div>
 
